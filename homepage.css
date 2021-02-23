@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+}
+/* header */
+
+header {
+    display: flex;
+    background-color: bisque;
+}
+.logo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    line-height: 64px;
+}
+
+.sp-menu {
+    margin-left: auto;
+}
+
+.sp-menu #open {
+    font-size: 40px;
+    line-height: 64px;
+    cursor: pointer;
+}
+
+.sp-menu #open.hide {
+    display: none;
+}
+.overray {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgb(255, 255, 255,1);
+    text-align: center;
+    padding-top: 90px;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overray #close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.overray ul {
+    list-style-type: none;
+}
+
+.overray li {
+    margin-bottom: 20px;
+}
+
+.overray.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+/* main */
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    height: 400px;
+    width: 500px;
+    opacity: 0.6;
+    z-index: 10;
+}
+
+
+main > h1 {
+    padding: 30px;
+    background: skyblue;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.language{
+    height: auto;
+    text-align: center;
+}
+
+.language img {
+    height: 200px;
+    width: 300px;
+}
+
+/* footer */
+
+footer {
+    height: 800px;
+    background: wheat;
+}
+
+footer h1 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+
+footer img {
+    height: 200px;
+    width: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pc-menu {
+    display: none;
+}
+
+
+
+@media (min-width:600px) {
+    .pc-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .pc-menu ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .pc-menu a {
+        display: block;
+        width: 140px;
+        line-height: 64px;
+        text-align: center;
+    }
+
+    .pc-menu a:hover {
+        background: gray;
+    }
+
+    .sp-menu {
+        display: none;
+    }
+}
